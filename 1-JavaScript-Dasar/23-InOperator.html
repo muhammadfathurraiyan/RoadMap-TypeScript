@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - In Operator</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // In Operator hanya mengecek apakah properties atau index ada atau tidak
+      const orang = {
+        nama: undefined,
+        umur: 21,
+      };
+      const result1 = "nama" in orang;
+      alert(result1);
+
+      if ("nama" in orang) {
+        alert(`nama: ${orang.nama}`);
+      } else {
+        alert("hello");
+      }
+
+      // akan mengembalikan nilai true tapi tidak peduli valuenya
+      const nama = [null, "Fathur", null];
+      const result2 = 0 in nama;
+      alert(result2);
+    </script>
+  </body>
+</html>

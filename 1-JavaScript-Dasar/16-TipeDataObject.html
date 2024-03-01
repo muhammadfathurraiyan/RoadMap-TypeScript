@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Tipe Data Object</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // Tipe Data Object
+      const orang = {};
+      // menambah atau mengubah
+      orang["nama"] = "Muhammad Fathur Raiyan";
+      orang["alamat"] = "Banda Aceh";
+      orang["usia"] = 21;
+
+      console.table(orang);
+
+      // menghapus
+      delete orang["alamat"];
+      console.table(orang);
+
+      // membuat object dengan properties
+      const hewan = { nama: "Kucing", alamat: "Banda Aceh", usia: 1 };
+      console.table(hewan);
+
+      console.info(`Nama : ${hewan.nama}`);
+      console.info(`Alamat : ${hewan.alamat}`);
+      console.info(`Umur : ${hewan.umur}`);
+    </script>
+  </body>
+</html>

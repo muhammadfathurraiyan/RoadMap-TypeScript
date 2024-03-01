@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Tipe Data Undefined</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // Tipe Data Undefined
+      let name;
+      if (name === undefined) {
+        alert("UNDEFINED");
+      } else {
+        alert("DEFINED");
+      }
+
+      const nama = ["Muhammad", "Fathur"];
+      if (nama[2] === undefined) {
+        alert("UNDEFINED");
+      } else {
+        alert(`Hello ${nama[2]}`);
+      }
+
+      const orang = {nama: "Sabirin"};
+      if (orang.nama === undefined) {
+        alert("UNDEFINED");
+      } else {
+        alert(`Hello ${orang.nama}`);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Popup</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // Popup
+      // contoh kode alert
+      alert("Hello world");
+
+      // contoh kode prompt
+      const nama = prompt("Siapa nama anda...");
+      document.writeln(`Nama anda adalah : ${nama}`);
+
+      // contoh kode confirm
+      const login = confirm("anda yakin ingin login");
+      if (login) {
+        const name = prompt("masukan nama anda sekali lagi...");
+        alert(`hello ${name}`);
+      } else {
+        alert("bye!");
+      }
+    </script>
+  </body>
+</html>

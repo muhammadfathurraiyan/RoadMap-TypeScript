@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - String Template</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // String Template
+      const nama = "Muhammad Fathur Raiyan";
+      const ipk = 100;
+      const template = `Nama : ${nama}, Nilai IPK : ${ipk}`;
+      console.info(template);
+
+      // Multilane Template
+      const multilane = `
+      Nama: ${nama},
+      Nilai IPK: ${ipk},
+      `;
+      document.writeln("<pre>" + multilane + "</pre>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Ternary Operator</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      const nilai = 80;
+      let ucapan;
+      // tanpa ternary operator
+      if (nilai >= 80) {
+        ucapan = "Anda Lulus";
+      } else {
+        ucapan = "Anda tidak lulus";
+      }
+      document.writeln(ucapan);
+      document.writeln("<br>");
+
+      // dengan ternary oprator
+      ucapan = nilai >= 80 ? "Anda lulus" : "Anda tidak lulus";
+      document.writeln(ucapan);
+    </script>
+  </body>
+</html>

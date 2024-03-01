@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Opeator Chaining</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      let data = {};
+      // akan terdapat error
+      // alert(data.nama.namadepan); // Cannot read properties of undefined (reading 'namadepan')
+
+      // fixing tanpa Opeator Chaining
+      if (data.nama === null || data.nama === undefined) {
+        alert("data.nama is null or undefined");
+      }
+
+      // dengan Opeator Chaining
+      alert(data?.nama?.namadepan); // undefined
+    </script>
+  </body>
+</html>

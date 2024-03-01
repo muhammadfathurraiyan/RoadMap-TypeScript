@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Nullish Coalescing Operator</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      let data;
+      let ucapan = data;
+      // tanpa Nullish Coalescing Operator
+      if (ucapan === null || ucapan === undefined) {
+        ucapan = "Nilai Default";
+      }
+      document.writeln(ucapan);
+      document.writeln("<br>");
+
+      // dengan nullish coalescing operator
+      ucapan = data ?? "Nilai Default dengan coalescing operator";
+      document.writeln(ucapan);
+    </script>
+  </body>
+</html>

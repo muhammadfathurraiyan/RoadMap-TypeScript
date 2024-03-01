@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - SwitchExpression</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // SwitchExpression
+      let data;
+      switch (typeof data) {
+        case "number":
+          document.writeln("<p>number</p>");
+          break;
+        case "string":
+          document.writeln("<p>string</p>");
+          break;
+        case "boolean":
+          document.writeln("<p>boolean</p>");
+          break;
+        case "object":
+          document.writeln("<p>object</p>");
+          break;
+        default:
+          document.writeln("<p>undefined</p>");
+          break;
+      }
+    </script>
+  </body>
+</html>

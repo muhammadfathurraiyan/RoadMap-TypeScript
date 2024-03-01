@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Konversi String dan Number</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // Masalah tanpa konversi
+      const a = 1;
+      const b = "2";
+      const sum = a + b;
+      document.writeln("<p>" + sum + "</p>"); //12
+
+      // Konversi
+      document.writeln("<p>" + parseInt("1.1") + "</p>");
+      document.writeln("<p>" + parseFloat("1.4") + "</p>");
+      document.writeln("<p>" + Number(1.1) + "</p>");
+
+      document.writeln("<p>" + parseInt("1 hello") + "</p>"); // 1
+      document.writeln("<p>" + parseInt("hello") + "</p>"); // NaN
+      document.writeln("<p>" + parseFloat("1.1 hello") + "</p>"); // 1.1
+
+      // number tidak akan mentoleran
+      document.writeln("<p>" + Number("1hello") + "</p>"); // NaN
+      document.writeln("<p>" + Number("hello") + "</p>"); // NaN
+      document.writeln("<p>" + Number("1.1 hello") + "</p>"); // Nan
+
+      // operasi nan
+      const x = Number("text");
+      const y = 100;
+      const z = x + y;
+      document.writeln(`<p>${z}</p>`); // Nan
+      //check isNaN
+      document.writeln(`<p>${isNaN(z)}</p>`); // true
+    </script>
+  </body>
+</html>
