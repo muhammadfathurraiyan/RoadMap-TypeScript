@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Function Parameter</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // membuat function parameter
+      function helloWorld(firstName, lastName) {
+        const say = document.writeln(`<p>Hello ${firstName} ${lastName}</p>`);
+        return say;
+      }
+
+      // memanggil function
+      const result = helloWorld("Muhammad", "Fathur Raiyan");
+      document.writeln(`${result}`);
+
+      // kode function yang memiliki return value lebih dari satu
+      function getFinalScore(value) {
+        if (value > 90) {
+          return "A";
+        } else if (value > 80) {
+          return "B";
+        } else if (value > 70) {
+          return "C";
+        } else if (value > 60) {
+          return "D";
+        } else {
+          return "E";
+        }
+      }
+
+      const nilai = getFinalScore(100);
+      console.info(nilai);
+
+      //  menggunakan keyword return untuk menghentikan eksekusi function
+      function isContains(array, searchValue) {
+        for (const data of array) {
+          if (data === searchValue) return true;
+        }
+        return false;
+      }
+
+      console.info(isContains([1, 2, 3, 4, 5, 6, 7, 8], 5));
+    </script>
+  </body>
+</html>
