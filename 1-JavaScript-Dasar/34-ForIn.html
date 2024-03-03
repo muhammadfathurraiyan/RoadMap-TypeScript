@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - For In</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // For In Object
+      const person = {
+        name: "John",
+        age: 30,
+        address: "Banda Aceh",
+      };
+      for (let property in person) {
+        document.writeln(`<p>Property ${property} : ${person[property]}</p>`);
+      }
+
+      // For In Array
+      const name = ["Sabirin", "John", "Michael"];
+      for (let index in name) {
+        document.writeln(`<p>Index ${index} : ${name[index]}</p>`);
+      }
+    </script>
+  </body>
+</html>

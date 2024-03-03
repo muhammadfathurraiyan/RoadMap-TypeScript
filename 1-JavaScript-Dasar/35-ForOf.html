@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - For Of</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // For of pada array
+      const names = ["John", "Obi", "Mikel"];
+      for (const name of names) {
+        document.writeln(`<p>${name}</p>`);
+      }
+
+      // for of pada string
+      const fullName = "John Obi Mikel";
+      for (const char of fullName) {
+        document.writeln(`<p>${char}</p>`);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - With Statement</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      const person = {
+        name: "John",
+        age: 30,
+        address: "Banda Aceh",
+      };
+      // tanpa With Statement
+      console.info(person.name);
+      console.info(person.age);
+      console.info(person.address);
+
+      // dengan with Statement
+      with (person) {
+        console.info(name);
+        console.info(age);
+        console.info(address);
+      }
+
+      const age = 21;
+      const address = "Aceh Besar";
+
+      with (person) {
+        console.info(name);
+        console.info(age);
+        console.info(address);
+      }
+    </script>
+  </body>
+</html>
