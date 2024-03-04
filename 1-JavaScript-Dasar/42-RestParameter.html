@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Rest Parameter</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // membuat rest parameter
+      function sum(name, ...data) {
+        let total = 0;
+        for (const item of data) {
+          total += item;
+        }
+        console.info(`Total ${name}: ${total}`);
+      }
+
+      sum("Apple", 5, 6, 7, 8, 9, 10);
+      sum("Mango", 5, 6, 7, 3, 9, 10);
+      sum("Banana", 5, 6, 1, 8, 9, 10);
+
+      // rest parameter dengan data array
+      const coconut = [2, 4, 5, 6, 7];
+      sum("Coconut", ...coconut);
+
+      // arguments object tidak disarankan memakai ini
+      function oldSum() {
+        let total = 0;
+        let name;
+        for (const index of arguments) {
+          // catching nama dan value
+          if (typeof index === "string") {
+            name = index;
+          } else {
+            total += index;
+          }
+        }
+        console.info(`Total ${name}: ${total}`);
+      }
+
+      oldSum(1, 34, 56, "raiyan", 1, 2, 3, 4, 5, 6);
+    </script>
+  </body>
+</html>

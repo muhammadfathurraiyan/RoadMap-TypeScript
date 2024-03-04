@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Anonymous Function</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // membuat Anonymous Function
+      let say = function (name) {
+        console.log(name);
+      };
+
+      say("Sabirin");
+
+      function giveMeName(callback, name) {
+        callback(name);
+      }
+
+      giveMeName(function (name) {
+        console.log(`Hello ${name}`);
+      }, "Sabirin");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Function Sebagai Value</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // membuat function sebagai value
+      function sayHello(name) {
+        console.log(name);
+      }
+      const say = sayHello;
+      sayHello("Sabirin");
+      say("lamno");
+
+      // function sebagai parameter
+      function giveMeName(callback, name) {
+        callback(name);
+      }
+      giveMeName(sayHello, "Muhammad");
+      giveMeName(say, "Fathur Raiyan");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Default Parameter</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // membuat Default parameter
+      function helloWorld(firstName, lastName = "Fathur Raiyan") {
+        console.log(firstName);
+        console.log(lastName);
+      }
+
+      helloWorld("Muhammad");
+      helloWorld("Muhammad", "Sabirin");
+      helloWorld("Muhammad", undefined);
+    </script>
+  </body>
+</html>
