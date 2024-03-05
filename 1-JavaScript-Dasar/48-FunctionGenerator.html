@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Function Generator</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // function generator sederhana
+      // function* generatorSederhana() {
+      //   yield "Muhammad";
+      //   yield "Fathur";
+      //   yield "Raiyan";
+      // }
+
+      // const names = generatorSederhana();
+      // for (const name of names) {
+      //   console.log(name);
+      // }
+
+      // lazy
+      function* ganjilGenerator(value) {
+        for (let i = 1; i <= value; i++) {
+          if (i % 2 === 1) {
+            console.log(`perulangan ke ${i}`);
+            yield i;
+          }
+        }
+      }
+
+      // eager
+      function ganjilGeneratorArray(value) {
+        let array = [];
+        for (let i = 1; i <= value; i++) {
+          if (i % 2 === 1) {
+            console.log(`perulangan ke ${i}`);
+            array.push(i);
+          }
+        }
+        return array;
+      }
+
+      const angkaGanjil = ganjilGenerator(10);
+      console.log(angkaGanjil.next().value);
+
+      for (const angka of angkaGanjil) {
+        console.info(angka);
+      }
+    </script>
+  </body>
+</html>

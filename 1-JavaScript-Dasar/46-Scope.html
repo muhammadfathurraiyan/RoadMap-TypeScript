@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Scope</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // membuat global scope
+      let counter = 0;
+      function hitMe() {
+        // bisa mengakses global scope
+        counter++;
+      }
+      hitMe();
+      hitMe();
+      console.log(counter);
+
+      // membuat local scope
+
+      function helloWorld() {
+        // ini adalah local scope
+        let hello = "Hello, world!";
+        console.log(hello);
+      }
+
+      helloWorld();
+      // console.log(hello); // tidak dapat mengakses local scope
+
+      // nested scope
+      function first() {
+        let firstVariable = "First";
+        function seccond() {
+          console.log(firstVariable); // dapat mengakses firstVariable walaupun di dadalam function
+        }
+
+        seccond();
+      }
+
+      first();
+    </script>
+  </body>
+</html>

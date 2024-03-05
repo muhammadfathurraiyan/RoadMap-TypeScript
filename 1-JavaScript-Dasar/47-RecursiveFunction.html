@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Recursive Function</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // kode factorial loop
+      function factorial(value) {
+        let result = 1;
+        for (let i = 1; i <= value; i++) {
+          result *= i;
+        }
+        return result;
+      }
+
+      console.log(factorial(5));
+      console.log(1 * 2 * 3 * 4 * 5);
+
+      // kode factorial recursive
+      function factoriaRecursive(value) {
+        if (value === 1) {
+          return value;
+        } else {
+          return value * factoriaRecursive(value - 1);
+        }
+      }
+
+      console.log(factoriaRecursive(5));
+
+      function loop() {
+        let value = [];
+        for (let i = 1; i <= 10; i++) {
+          value.push(i);
+        }
+        return value;
+      }
+
+      console.log(loop());
+
+
+      // code di bawah gagal recursive funtion sangan sulit _-
+
+      function loopRecursive(value) {
+        if (value.length === 10) {
+          return value;
+        } else {
+          return value.push(loopRecursive(value - 1));
+        }
+      }
+
+      console.log(loopRecursive([1]));
+    </script>
+  </body>
+</html>
