@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Destructuring</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // kode mengambil data dari array
+      const names = ["Muhammad", "Fathur", "Raiyan"];
+      const firstName = names[0];
+      const middleName = names[1];
+      const lastName = names[2];
+      console.log(firstName, middleName, lastName);
+
+      // dengan destructuring
+      const nama = ["Muhammad", "Fathur", "Raiyan"];
+      const [namaDepan, namaTengah, namaTerakhir, ...others] = nama;
+      console.log(namaDepan, namaTengah, namaTerakhir, ...others);
+
+      const person = {
+        name: "Muhammad Fathur Raiyan",
+        age: 20,
+        address: {
+          street: "Jln. Cut Nyak Dhien",
+          city: "Banda Aceh",
+          country: "Indonesia",
+        },
+        hobby: "Coding",
+      };
+
+      // kode mengambil data dari object
+      const nama1 = person.name;
+      const umur = person.age;
+
+      // dengan destructuring
+      const {
+        name,
+        age,
+        address: { country, city, street },
+        ...other
+      } = person;
+      console.log(name, age, country, city, street, other);
+
+      // destructuring data dalam function parameter menggunkan object
+      function displayPerson({ name, age }) {
+        console.log(name, age);
+      }
+
+      displayPerson(person);
+      // destructuring data dalam function parameter menggunkan array
+      function displayPersonArray([first, seccond]) {
+        console.log(first + seccond);
+      }
+
+      displayPersonArray([1, 2]);
+
+      // default value pada saat destructuring dengan array
+      const mfr = ["Muhammad", "Fathur"];
+      const [first, seccond, third = "Raiyan"] = mfr;
+      console.log(first, seccond, third);
+
+      // default value pada saat destructuring dengan object
+      const object = { m: "Muhammad", f: "Fathur" };
+      const { m, f, r = "Raiyan" } = object;
+      console.log(m, f, r);
+
+      // desructuing dengan menggati nama variable pada object
+      const { m: Muhammad, f: Fathur, r: Raiyan = "Raiyan" } = object;
+      console.log(Muhammad, Fathur, Raiyan);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Closure</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      const createAdder = (value) => {
+        const name = "Sabirin";
+        const add = (params) => {
+          console.log(name);
+          return value + params;
+        };
+        return add;
+      };
+
+      const addTwo = createAdder(2);
+      console.log(addTwo(10));
+      console.log(addTwo(20));
+    </script>
+  </body>
+</html>

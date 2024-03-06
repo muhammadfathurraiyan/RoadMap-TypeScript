@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Keyword This</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      console.log(this);
+      // this pada funciton
+      const hello = () => {
+        console.log(this);
+      };
+
+      hello();
+
+      // this pada object
+      const person = {
+        name: "John",
+        sayHello: function (name) {
+          console.log(`Hello ${name}, my name is ${this.name}`);
+        },
+      };
+
+      person.sayHello("Budi");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Debugger</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // kode menggunakan Debugger
+      function createDebugger(firstName, middleName, lastName) {
+        debugger;
+        const fullName = `${firstName} - ${middleName} - ${lastName}`;
+        return fullName;
+      }
+
+      createDebugger("Muhammad", "Sabirin", "Sabirin");
+    </script>
+  </body>
+</html>

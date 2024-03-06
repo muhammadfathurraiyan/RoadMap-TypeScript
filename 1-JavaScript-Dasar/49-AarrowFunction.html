@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Arrow Function</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // contoh arrow function
+      const helloWorld = () => {
+        console.log("hello world!");
+      };
+      helloWorld();
+
+      // arrow function tampa block
+      const helloWorld2 = () => console.log("hello world");
+      helloWorld2();
+
+      // arrow function bisa mengambalikan value seperti function biasa jika menggunakan block maka harus menggunaakan keyword return
+      // contoh menggunakan block
+      const sumXY = (x, y) => {
+        return x + y;
+      };
+      console.log(sumXY(1, 3));
+
+      // arrow function tanpa kurung parameter
+      const sayHello = (name) => console.log(name);
+      sayHello("sabirin");
+
+      // arrow function sebagai parameter
+      const giveNumber = (callback, name) => {
+        callback(name);
+      };
+
+      giveNumber(() => console.log("Raiyan"));
+    </script>
+  </body>
+</html>

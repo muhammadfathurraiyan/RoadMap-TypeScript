@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Strict Mode</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // kode menggunakan strict mode
+      function useStrictMode() {
+        "use strict";
+        const person = {
+          name: "Sabirin",
+          hobby: "Coding",
+        };
+
+        // 'with' statements are not allowed in strict mode.
+        with (person) {
+          console.log(name);
+          console.log(hobby);
+        }
+      }
+
+      useStrictMode();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Arrow Funtion Object Method</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      const person = {
+        name: "John",
+        sayHello: (name) => {
+          // tidak bisa menggunakan keyword this
+          console.log(`Hello ${name} my name is ${this.name}`);
+        },
+      };
+
+      person.sayHello("Budi");
+
+      // menambah method ke object
+      person.sayAge = (age) => {
+        console.log(`Age ${age}`);
+      };
+
+      person.sayAge(20);
+    </script>
+  </body>
+</html>
