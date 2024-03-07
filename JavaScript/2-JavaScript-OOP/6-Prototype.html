@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Prototype</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // Prototype
+      function Person(name, age = 0) {
+        this.name = name;
+        this.age = age;
+        this.sayHello = function (name) {
+          console.log(`Hello ${name}, my name is ${this.name}`);
+        };
+      }
+
+      const fathur = new Person("Fathur", 20);
+      console.log(fathur);
+      fathur.sayHello("Sabirin");
+
+      // menambah property ke instance object
+      // fathur.sayBye = function (name) {
+      //   console.log(`${name}, good bye.`);
+      // };
+      // fathur.sayBye("Sabirin");
+
+      // menambah property pada prototype
+      Person.prototype.sayBye = function () {
+        console.log("Good bye");
+      };
+
+      Person.prototype.sayRun = function () {
+        console.log(`${this.name} RUN!`);
+      };
+
+      fathur.sayRun();
+
+      const sabirin = new Person("Sabirin", 20);
+      console.log(sabirin);
+      sabirin.sayHello("fathur");
+    </script>
+  </body>
+</html>

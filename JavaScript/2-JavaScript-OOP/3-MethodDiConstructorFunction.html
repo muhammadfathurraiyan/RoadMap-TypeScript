@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Method Di Constructor Function</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      function Person() {
+        this.name = "";
+        this.age = "";
+        this.sayHello = function (name) {
+          console.log(`Hello ${name}, my name is ${this.name}`);
+        };
+      }
+      const fathur = new Person();
+      fathur.name = "Muhammad Fathur Raiyan";
+      fathur.age = 20;
+      fathur.sayHello("Sabirin");
+      console.log(fathur);
+
+      const sabirin = new Person();
+      sabirin.name = "Sabirin";
+      sabirin.age = 20;
+      sabirin.sayHello("Fathur");
+      console.log(sabirin);
+    </script>
+  </body>
+</html>

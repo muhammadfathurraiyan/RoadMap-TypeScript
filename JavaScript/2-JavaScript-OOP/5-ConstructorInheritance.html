@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Constructor Inheritance</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // Constructor inheritance
+      function Employee(name, age = 0) {
+        this.name = name;
+        this.age = age;
+        this.sayHello = function (name) {
+          console.log(`Hello ${name}, my name is ${this.name}`);
+        };
+      }
+      function Manager(title, name, age) {
+        this.title = title;
+        Employee.call(this, name, age);
+      }
+
+      const fathur = new Manager("Manager", "Muhammad Fathur Raiyan", 20);
+      console.log(fathur);
+      fathur.sayHello("Sabirin");
+    </script>
+  </body>
+</html>

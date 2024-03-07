@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Property Di Constructor Function</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      function Person() {
+        this.name = "";
+        this.age = 0;
+      }
+      const fathur = new Person();
+      fathur.name = "Muhammad Fathur Raiyan";
+      fathur.age = 20;
+      console.log(fathur);
+
+      const sabirin = new Person();
+      sabirin.name = "Sabirin";
+      sabirin.age = 20;
+      console.log(sabirin);
+    </script>
+  </body>
+</html>
