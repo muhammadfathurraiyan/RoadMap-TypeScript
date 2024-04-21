@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript - Prototype Inheritance</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // Prototype
+      function Employee(name) {
+        this.name = name;
+      }
+
+      function Manager(name) {
+        this.name = name;
+      }
+
+      // prototype inheritance salah
+      // Manager.prototype = Employee.prototype;
+      // prototype inheritance benar
+      Manager.prototype = Object.create(Employee.prototype);
+
+      Manager.prototype.sayHello = function (name) {
+        console.log(`hello ${name}, my name is Manager ${this.name}`);
+      };
+
+      Employee.prototype.sayHello = function (name) {
+        console.log(`hello ${name}, my name is Employee ${this.name}`);
+      };
+
+      const manager = new Manager("Alex");
+      manager.sayHello("Baena");
+
+      const employee = new Employee("Iskandar");
+      employee.sayHello("Baena");
+    </script>
+  </body>
+</html>
